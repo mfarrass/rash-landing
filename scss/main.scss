@@ -1,0 +1,137 @@
+@import 'fonts';
+@import 'variabels';
+@import 'mixins';
+
+
+//Styles
+body {
+    &::before {
+        content: '';
+        background-image: url(../img/bg-roket.png);
+        background-color: #2C1E58;
+        position: relative;
+        background-position: top right;
+        background-repeat: no-repeat;
+        background-size: 75vmax;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+  
+    }
+}
+
+
+
+// Navbar
+.custom-nav {
+    .navbar-brand {
+        img {
+            width: 30px;
+            height: 30px;
+            margin-top: -4px;
+        }
+        span {
+            color: $textColorSatu;
+            font-weight: 700;
+            font-family: 'Dongle', sans-serif;
+            font-size: 3.5rem;
+            margin-left: 0.2em;
+            text-shadow: 2px 1px black
+
+        }
+    }
+
+    #navbarNav {
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    color: $textColordua;
+                    font-weight: 500;
+                    margin-left: 2.5em;
+                    transition: 0.3s color ease;
+                    border: 1px solid transparent;
+                    transition: 0.5s ease;
+
+                &:hover {
+                    color: darken($textColordua, 70%);
+                    border: 1px solid $textColorSatu;
+                    background-color: transparent;
+                
+                }
+            }
+                .sign-up-button {
+                    @include tombol;
+
+                &:hover {
+                    color: darken($secondaryColor,50%)
+                }
+
+                }
+            }
+        }
+    }
+@media screen and (max-width: 992px) {
+    margin-top: 14px;
+}
+}
+
+
+// custome section
+.custom-section {
+    margin-top: 6em;
+    h2 {
+        font-weight: 700;
+        font-size: 4rem;
+        color: $textColorSatu;
+        text-transform: inherit;
+        // white-space: nowrap; // memaksa agar text tetap sebaris 
+    }
+
+    p {
+        font-weight: 200;
+        color: $textColordua;
+    }
+
+    a {
+        margin-top: 1em;
+        @include tombol;
+        border: 1px solid transparent;
+        transition: 0.5s ease;
+
+        &:hover {
+            color: darken($textColordua,50%);
+            border: 1px solid $textColorSatu;
+            background-color: transparent;
+        }
+    }
+
+    
+
+
+
+    @media screen and (max-width: 992px) {
+      margin-top: 3em;
+      h2, p { 
+      text-shadow: 2px 1px black
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+        margin-left: -2.5em;
+        text-shadow: 2px 1px black
+    }
+
+    @media screen and (max-width: 576px) {
+        margin-left: -1.5em;
+        margin-top: 6em;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
